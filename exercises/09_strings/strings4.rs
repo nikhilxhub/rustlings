@@ -9,29 +9,34 @@ fn string(arg: String) {
     println!("{arg}");
 }
 
-// TODO: Here are a bunch of values - some are `String`, some are `&str`.
-// Your task is to replace `placeholder(…)` with either `string_slice(…)`
-// or `string(…)` depending on what you think each value is.
 fn main() {
-    placeholder("blue");
+    // &str literal
+    string_slice("blue");
 
-    placeholder("red".to_string());
+    // String created via to_string()
+    string("red".to_string());
 
-    placeholder(String::from("hi"));
+    // String created via String::from
+    string(String::from("hi"));
 
-    placeholder("rust is fun!".to_owned());
+    // String created via to_owned()
+    string("rust is fun!".to_owned());
 
-    placeholder("nice weather".into());
+    // String created via into()
+    string("nice weather".into());
 
-    placeholder(format!("Interpolation {}", "Station"));
+    // String created via format!
+    string(format!("Interpolation {}", "Station"));
 
-    // WARNING: This is byte indexing, not character indexing.
-    // Character indexing can be done using `s.chars().nth(INDEX)`.
-    placeholder(&String::from("abc")[0..1]);
+    // &str slice of a String
+    string_slice(&String::from("abc")[0..1]);
 
-    placeholder("  hello there ".trim());
+    // &str returned by trim()
+    string_slice("  hello there ".trim());
 
-    placeholder("Happy Monday!".replace("Mon", "Tues"));
+    // String returned by replace()
+    string("Happy Monday!".replace("Mon", "Tues"));
 
-    placeholder("mY sHiFt KeY iS sTiCkY".to_lowercase());
+    // String returned by to_lowercase()
+    string("mY sHiFt KeY iS sTiCkY".to_lowercase());
 }

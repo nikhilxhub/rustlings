@@ -15,7 +15,7 @@ mod delicious_snacks {
 
     mod veggies {
         pub const CUCUMBER: &str = "Cucumber";
-        pub const CARROT: &str = "Carrot";
+        pub const CARROT: &str = "Carrothjgbuygyu";
     }
 }
 
